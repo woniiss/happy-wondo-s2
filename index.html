@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="imageA.png" id="closed" class="active" alt="봉투" />
+    <img src="imageB.png" id="opened" alt="편지" />
+
+    <button id="closeBtn">닫기</button>
+  </div>
+
+  <script>
+    const closed = document.getElementById("closed");
+    const opened = document.getElementById("opened");
+    const closeBtn = document.getElementById("closeBtn");
+
+    closed.addEventListener("click", () => {
+      closed.classList.remove("active");
+      opened.classList.add("active");
+      closeBtn.style.display = "block";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      opened.classList.remove("active");
+      closed.classList.add("active");
+      closeBtn.style.display = "none";
+    });
+  </script>
+</body>
+</html>
