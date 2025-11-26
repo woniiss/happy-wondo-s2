@@ -88,3 +88,25 @@ body {
   animation: floatIn 0.8s ease forwards;
 }
 
+
+/* 열릴 때 살짝 확대되는 애니메이션 */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* #opened에 active가 붙으면 popIn 애니메이션 적용 */
+#opened.active {
+  display: block;
+  animation: popIn 0.6s ease forwards;
+}
