@@ -66,3 +66,25 @@ body {
   }
 }
 
+/* 부드러운 둥둥 떠오르는 애니메이션 */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 이미지가 active될 때 적용 */
+.img.active {
+  display: block;
+  animation: floatIn 0.8s ease forwards;
+}
+
